@@ -8,18 +8,18 @@ import formation from './assets/site-map.png';
 import activities from './assets/settings-tools.png';
 import { relative } from 'path';
 
-const Perfil = () => {
+const Perfil = (props) => {
     return(
         <section id="perfil">
         <div className="container" style={{marginTop: 100}}>
             <div className="row">
                 <div id="col" className="col-xl-6 col-md-12 col-sm-12">
                     <img src={foto} width="500" height="500"/>
-                    <p style={{paddingTop: 50}}>Olá, sou <strong>Matheus Silvano Graciano</strong>. Estudante de Engenharia da Computação, nascido em Angatuba-SP, atualmente morando em Cornélio Procópio-PR.</p>
+                    <p style={{paddingTop: 50}}>Olá, sou <strong>{props.name}</strong>.{props.description}</p>
                     <a href={curriculo} target="_blank" download="Currículo-K.pdf"><button>CURRÍCULO COMPLETO</button></a>
                 </div>
                 <div id="col" className="col-xl-6 col-md-12 col-sm-12">
-                    <h1 style={{paddingBottom:"50px"}}>MATHEUS SILVANO GRACIANO</h1>
+                    <h1 style={{paddingBottom:"50px"}}>{props.name.toUpperCase()}</h1>
                     <div className="interesses" style={{paddingTop:"10px"}}>
                         <span style={{position:relative}}><img src={lamp}  style={{position:relative, paddingRight:"10px"}} />INTERESSES</span>
                         <ul style={{paddingTop:"10px"}}>

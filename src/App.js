@@ -14,7 +14,7 @@ class App extends Component{
     return (
       <div>
         <NavBar />
-        <Perfil />
+        <Perfil name="Matheus Silvano Graciano" description=" Estudante de Engenharia da Computação, nascido em Angatuba-SP, atualmente morando em Cornélio Procópio-PR."/>
         <Skills />
         <Blog />
         <Portifolio />
