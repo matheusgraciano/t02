@@ -7,13 +7,59 @@ import Portifolio from './ui/Portifolio';
 import Footer from './ui/Footer';
 import Information from './ui/Information';
 import Contact from './ui/Contact';
+import api from './services/api';
+import { AsyncStorage } from 'AsyncStorage';
+
 
 
 class App extends Component{
+
+  constructor(props){
+    super(props)
+    this.state = {
+      projects: []
+    }
+  }
+
+  // state = {
+  //   loggedInUser: null,
+  //   projects: []
+  // }
+
+  signIn = async () => {
+    try{
+      const response = await api.post('/auth/authenticate', {
+        nickname: 'FredKrugler1',
+        password: '123456',
+      })
+
+      console.log('Deu certo')
+  
+      const {user, token} = response.data
+      
+      console.log(token)
+
+      await localStorage.multiset([
+        ['@CodeApi:token', token],
+        ['@CodeApi:user', JSON.stringify(user)],
+      ])
+
+      this.setState({loggedInUser: user})
+
+    }catch(err){
+      console.log(err.response)
+    }
+
+  }
+  
+  componentDidMount(){
+      this.signIn()  
+  }
+
   render(){
     return (
       <div>
-        <NavBar />
+        <NavBar/>
         <Perfil />
         <Skills />
         <Blog />
@@ -25,6 +71,6 @@ class App extends Component{
       </div>
     );
   }
-} 
+}
 
 export default App;

@@ -4,6 +4,8 @@
   "private": true,
   "homepage": "https://matheusgraciano.github.io/t02/",
   "dependencies": {
+    "AsyncStorage": "^0.1.5",
+    "axios": "^0.18.0",
     "gh-pages": "^2.0.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
@@ -14,7 +16,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "config_run": "sudo sysctl -w fs.inotify.max_user_instances=1024 && sudo sysctl -w fs.inotify.max_user_watches=12288 && chmod -R a+rwx ./node_modules",
+    "config_remove": "rm -rf node_modules"
   },
   "eslintConfig": {
     "extends": "react-app"

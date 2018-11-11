@@ -1,0 +1,9 @@
+{
+    "name": "Matheus Silvano Graciano",
+    "description": "Olá, sou Matheus Silvano Graciano. Estudante de Engenharia da Computação, nascido em Angatuba-SP, atualmente morando em Cornélio Procópio-PR.",
+    "pdf_download": "./Currículo K.pdf",
+    "interesses": ["Inteligência Artificial", "Programação Web", "Desenvolvimento Front-End"],
+    "idiomas": ["Portugês - Nativo", "Inglês - Avançado"],
+    "formation": ["2019(UTFPR)- Bacharelado em Engenharia da Computação", "2014(SENAI) - Técnico em Mecatrônica", "2014(SESI) - Ensino Médio"],
+    "atividades": ["Estudante", "Futuro Estagiário"]
+}
