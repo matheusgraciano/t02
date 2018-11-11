@@ -12,24 +12,24 @@ const Contact = () => {
             <section id="contact">
                 <Intro value="CONTATO" value2="ENTRE EM CONTATO" value3="Entre em contato pelo formulário ou pelas redes sociais abaixo."/>
                 <div className="container">
-                    <form style={{color:"#f2e9e4", padding:"5px"}}>
+                    <form action="https://formspree.io/krugler9@gmail.com" method="POST" style={{color:"#f2e9e4", padding:"5px"}}>
                         <div className="form-group">
                             <label for="nameform">Nome</label>
-                            <input type="name" className="form-control" id="namecontrol" placeholder="Digite seu nome"></input>
+                            <input type="name" name="name" className="form-control" id="namecontrol" placeholder="Digite seu nome"></input>
                         </div>
                         <div className="form-group">
                             <label for="emailform">E-mail</label>
-                            <input type="name" className="form-control" id="emailcontrol" placeholder="Digite seu Email"></input>
+                            <input type="name" className="form-control" name="_replyto" id="emailcontrol" placeholder="Digite seu Email"></input>
                         </div>
                         <div className="form-group">
                             <label for="emailform">Assunto</label>
-                            <input type="name" className="form-control" id="emailcontrol" placeholder="Digite o Assunto da Mensagem"></input>
+                            <input type="name" name="_subject" className="form-control" id="emailcontrol" placeholder="Digite o Assunto da Mensagem"></input>
                         </div>
                         <div className="form-group">
                             <label for="mensagemform">Mensagem</label>
-                            <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Digite sua Mensagem"></textarea>
+                            <textarea className="form-control" name="message" id="exampleFormControlTextarea1" rows="3" placeholder="Digite sua Mensagem"></textarea>
                         </div>
-                        <button type="submit" className="btn btn-primary btn-dark">ENVIAR</button>
+                        <button type="submit" value="send" className="btn btn-primary btn-dark">ENVIAR</button>
                     </form>
                 </div>
                 <div style={{textAlign:"center", paddingBottom:"20px"}} className="container">

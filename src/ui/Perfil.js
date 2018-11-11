@@ -8,6 +8,7 @@ import formation from './assets/site-map.png';
 import activities from './assets/settings-tools.png';
 import { relative } from 'path';
 
+<<<<<<< HEAD
 import api from '../services/api'
 
 class Perfil extends Component {
@@ -50,6 +51,42 @@ class Perfil extends Component {
                         <img src={foto} width="500" height="500"/>
                         <p style={{paddingTop: 50}}>{this.state.projects.project}</p>
                         <a href={curriculo} target="_blank" download="Currículo.pdf"><button>CURRÍCULO COMPLETO</button></a>
+=======
+const Perfil = (props) => {
+    return(
+        <section id="perfil">
+        <div className="container" style={{marginTop: 100}}>
+            <div className="row">
+                <div id="col" className="col-xl-6 col-md-12 col-sm-12">
+                    <img src={foto} width="500" height="500"/>
+                    <p style={{paddingTop: 50}}>Olá, sou <strong>{props.name}</strong>.{props.description}</p>
+                    <a href={curriculo} target="_blank" download="Currículo-K.pdf"><button>CURRÍCULO COMPLETO</button></a>
+                </div>
+                <div id="col" className="col-xl-6 col-md-12 col-sm-12">
+                    <h1 style={{paddingBottom:"50px"}}>{props.name.toUpperCase()}</h1>
+                    <div className="interesses" style={{paddingTop:"10px"}}>
+                        <span style={{position:relative}}><img src={lamp}  style={{position:relative, paddingRight:"10px"}} />INTERESSES</span>
+                        <ul style={{paddingTop:"10px"}}>
+                            <li>Inteligência Artificial</li>
+                            <li>Banco de Dados</li>
+                            <li>Desenvolvimento Front-End</li>
+                        </ul>
+                    </div>
+                    <div className="idiomas" style={{paddingTop:"10px"}}>
+                        <span style={{position:relative}}><img src={idioms}  style={{position:relative, paddingRight:"10px"}} />IDIOMAS</span>
+                        <ul style={{paddingTop:"10px"}}>
+                            <li>Português - Nativo</li>
+                            <li>Inglês - Avançado</li>
+                        </ul>
+                    </div>
+                    <div className="formation" style={{paddingTop:"10px"}}>
+                        <span style={{position:relative}}><img src={formation}  style={{position:relative, paddingRight:"10px"}} />FORMAÇÃO</span>
+                        <ul style={{paddingTop:"10px"}}>
+                            <li>2019(UTFPR)- Bacharelado em Engenharia da Computação</li>
+                            <li>2014(SENAI) - Técnico em Mecatrônica</li>
+                            <li>2014(SESI) - Ensino Médio</li>
+                        </ul>
+>>>>>>> 116b718de439d1b02cb4e52bda273954a2f57e90
                     </div>
                     <div id="col" className="col-xl-6 col-md-12 col-sm-12">
                         <h1 style={{paddingBottom:"50px"}}>{this.props.name}</h1>
